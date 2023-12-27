@@ -11,7 +11,7 @@ const adminLoginValidator = {
       });
       const { error, value } = schema.validate(body);
       if (error) {
-        return res.status(400).json({ message: `Invalid...`, error });
+        return res.status(400).json({ message: ('Invalid'), error });
       }
       next();
     } catch (error) {

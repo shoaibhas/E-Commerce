@@ -10,7 +10,7 @@ const orderModel = sequelizes.define("order", {
     type: DataTypes.STRING,
     allowNull: true,
   },
-  address: {
+  customerAddress: {
     type: DataTypes.STRING,
     allowNull: true,
   },

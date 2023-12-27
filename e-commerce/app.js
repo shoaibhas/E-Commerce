@@ -5,9 +5,11 @@ import initDB from "./db/init.js";
 import Session from "express-session";
 import SequelizeStore from "connect-session-sequelize";
 import allRouter from "./router/index.js";
+import cors from 'cors'
 const port = process.env.port;
 const envData = process.env;
 const app = express();
+app.use(cors())
 connectDB();
 const mySequelizeStore = SequelizeStore(Session.Store);
 const mySequelizeStore1 = new mySequelizeStore({

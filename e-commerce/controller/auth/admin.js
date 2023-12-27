@@ -24,7 +24,7 @@ const AdminLoginController = {
         .status(200)
         .json({ message: `User Registered=========>${firstName}` });
     } catch (error) {
-      console.log({ message: `some bad happened`, error });
+      return res.json({ message: `some bad happened`, error });
     }
   },
   login: async (req, res) => {
@@ -65,7 +65,7 @@ const AdminLoginController = {
     try {
       const a = await adminModel.findAll();
       // console.log(a);
-      return res.status(200).json({ message: `Get All Users`, a });
+      return res.status(200).json({ message: `All Admin`, a });
     } catch (error) {
       console.log(`some bad`, error);
     }
