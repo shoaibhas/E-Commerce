@@ -1,2 +1,2 @@
-# this is my e-commerce project
+# this is my politician web app project
 #
